@@ -1,4 +1,4 @@
-# Aula 4 - Atributos de visibilidade e encapsulamento
+# Aula 5 - Atributos de visibilidade e encapsulamento
 
 ## Encapsulamento - Slides
 * Em Python, todas os atributos e métodos declarados em uma classe são públicos, ou seja, podem ser acessados pelo mundo externo.

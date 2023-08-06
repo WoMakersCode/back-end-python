@@ -1,9 +1,9 @@
 # Aula 5 - Atributos de visibilidade e encapsulamento
 
 ## Encapsulamento - Slides
-* Em Python, todas os atributos e métodos declarados em uma classe são públicos, ou seja, podem ser acessados pelo mundo externo.
-* Isso não quer dizer que eles devam ser usadas por quem instancia um objeto daquela classe.
-* Alguns atributos e métodos só existem na classe para seu funcionamento interno. Se forem alterados, podem gerar mal funcionamento e bugs no código.
+* Em Python, todos os atributos e métodos declarados em uma classe são públicos, ou seja, podem ser acessados por outros códigos externos à classe.
+* Isso não quer dizer que eles devam ser usados por quem instancia um objeto daquela classe.
+* Alguns atributos e métodos só existem na classe para seu funcionamento interno. Se forem alterados, podem gerar mal funcionamento e _bugs_ no código.
 * No exemplo abaixo, na classe `Quadrado` há dois atributos: `altura` e `largura`. Para que a classe de fato defina um quadrado, ela precisa ter altura e largura sempre iguais. Por isso, é interessante que quem usa a minha classe entenda que não deve mexer nesses atributos.
 ```python
 class Quadrado:
@@ -17,12 +17,12 @@ class Quadrado:
 quadrado = Quadrado(2)
 quadrado.altura = 3 # não é mais um quadrado
 ```
-* Outro exemplo: na aula anterior, quando modelamos o funcionamento de um estacionamento, nossa classe tinha um método para buscar qual o `id` da próxima vaga livre para carros e motos. Esse método serve para auxiliar para a lógica interna da classe e também não gostaríamos que ele ficasse exposto.
-* Para indicar ao usuário quais os atributos e métodos que ele não deve alterar na classe, nós utilizamos **convenções** nos em seus nomes.
+* Outro exemplo: na aula anterior, quando modelamos o funcionamento de um estacionamento, nossa classe tinha um método para buscar qual o `id` da próxima vaga livre para carros e motos. Esse método serve para auxiliar para a lógica interna da classe e também não gostaríamos que ele ficasse exposto, já que não faz sentido um usuário da classe chamar este método diretamente.
+* Para indicar ao usuário quais os atributos e métodos que ele não deve alterar na classe, nós utilizamos **convenções** de nomes.
 * Existem duas convenções que são utilizadas em Python para se iniciar nomes de métodos e atributos:
-  * **Protegidos**: Atributos e métodos que têm seus nomes iniciados com **_** (_underscore_) não devem ser acessados pelo mundo externo a não ser que o usuário saiba exatamente o que está fazendo, ou seja, ainda pode existir algum caso de uso em que faça sentido ter acesso a esse método/atributo. Em geral, o caso de uso mais comum para acesso a membros privados é com o uso de **herança**, que vamos ver a seguir.
-  * **Privados**: Atributos e métodos que têm seus nomes iniciados com **__** (_underscore_ duplo) não devem ser acessados pelo mundo externo de forma nenhuma. Na prática, eles têm seus nomes alterados pelo interpretador Python mais ainda são públicos, e o que garante que eles não vão ser acessados é o bom senso do usuário da classe.
-* Essas são o que nós chamaos de **regras de encapsulamento**, porque a ideia é encapsular atributos e métodos que são pertinentes a nossa classe mas não ao mundo externo.
+  * **Protegidos**: Atributos e métodos que têm seus nomes iniciados com **_** (_underscore_) não devem ser acessados pelo mundo externo a não ser que o usuário saiba exatamente o que está fazendo, ou seja, ainda pode existir algum caso de uso em que faça sentido ter acesso a esse método/atributo. Em geral, o caso de uso mais comum para acesso a membros privados é com o uso de **herança**, que vamos ver em um próxima aula.
+  * **Privados**: Atributos e métodos que têm seus nomes iniciados com **__** (_underscore_ duplo) não devem ser acessados pelo mundo externo de forma nenhuma. Na prática, eles têm seus nomes alterados pelo interpretador Python mas ainda são públicos, e o que garante que eles não vão ser acessados é o bom senso do usuário da classe.
+* Essas são o que nós chamamos de **regras de encapsulamento**, porque a ideia é encapsular atributos e métodos que são pertinentes a nossa classe mas não ao mundo externo.
 * Em outras linguagens de programação que possuem orientação a objetos como C# e Java, temos palavras-chaves especiais para definir membros privados e protegidos, mas não em Python. Em Python nós utilizamos convenções nos nomes dos métodos.
 * Se um usuário da classe quiser acessar os membros protegidos e privados, ele tem como fazer isso, mas vai estar quebrando as regras de encapsulamento, que de novo, são definidas por convenções nos nomes das variáveis.
 * Existe uma forma de controlar um pouco melhor como um usuário vai acessar os atributos de uma classe, que é através de **propriedades**.

@@ -55,14 +55,14 @@ class Estacionamento:
         self.inicializar_vagas()
 
     def inicializar_vagas(self):
-        self.vagas_carro = {} # id da vaga para a placa do carro
-        self.vagas_moto = {} # id da vaga para a placa da moto
+        self.vagas_carro = {} # id da vaga para o objeto de Vaga de carro
+        self.vagas_moto = {} # id da vaga para o objeto de Vaga de moto
 
         tipo = 'carro'
-        for i in range(self.total_vagas_livres_carro):
+        for i in range(self.total_vagas_livres_carro): # i vai de 0 a 4
             self.vagas_carro[i] = Vaga(i, tipo)
         
-        primeiro_id_motos = self.total_vagas_livres_carro
+        primeiro_id_motos = self.total_vagas_livres_carro # 5
         ultimo_id_motos = primeiro_id_motos + self.total_vagas_livres_moto
         tipo = 'moto'
         for j in range(primeiro_id_motos, ultimo_id_motos):

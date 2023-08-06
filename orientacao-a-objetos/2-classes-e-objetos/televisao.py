@@ -1,5 +1,5 @@
 # Definição da classe
-class Televisao: # Conveção para nomes de classes: PascalCasing
+class Televisao: # Convenção para nomes de classes: PascalCasing
     def __init__(self):
         self.ligada = False
         self.canal = 3
@@ -26,7 +26,7 @@ class Televisao: # Conveção para nomes de classes: PascalCasing
         if not self.ligada:
             return
 
-        if self.canal > self.canal_max:
+        if self.canal > self.canal_min:
             self.canal -= 1
         
     def aumentar_volume(self):

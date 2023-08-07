@@ -28,6 +28,9 @@ class BasePokemon(ABC):
 # pokemon = BasePokemon('Pikachu', 'Elétrico')
 
 class Pikachu(BasePokemon):
+    def __init__(self, nome):
+        super().__init__(nome)
+
     def ataque_principal(self):
         print(f'{self.nome} usou Choque de trovão!')
         self._experiencia += 2

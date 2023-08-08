@@ -21,7 +21,7 @@
 * O caso de uso mais legítimo é na criação de um _framework_.
 * Ao trabalhar com Django, vocês podem ver casos onde uma classe vai herdar de duas ou mais classes.
 
-# 06_heranca_multipla.py
+# heranca_multipla.py
 * A classe `Logavel` define o método `logar`. Qualquer classe que herdar dela vai conseguir escrever uma mensagem no log e nós vamos saber de onde a mensagem está vindo pelo atributo `nome_da_classe` que é inicializado no construtor.
   * Ter uma classe assim é interessante porque a lógica de criar um arquivo de log, escrever as mensagens dentro dele e fechar o arquivo depois fica todo em um lugar só.
   * Quem está escrevendo um software não precisa se preocupar em escrever essa lógica toda vez, é só herdar de `Logavel`.

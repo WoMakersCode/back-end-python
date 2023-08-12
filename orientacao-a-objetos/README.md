@@ -10,7 +10,8 @@
 | Orientação a Objetos com Python  |  5   | Atributos de visibilidade e encapsulamento  encapsulamento |
 | Orientação a Objetos com Python  |  6   | Herança, herança múltipla (_mixins_) |
 | Orientação a Objetos com Python  |  7   | Classes abstratas e a biblioteca ABC |
-| Orientação a Objetos com Python  |  8   | Lidando com erros e exceções |
+| Orientação a Objetos com Python  |  8   | Tipagem Pato |
+| Orientação a Objetos com Python  |  9   | Lidando com erros e exceções |
 
 
 ## Referências

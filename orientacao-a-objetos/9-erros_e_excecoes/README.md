@@ -11,7 +11,7 @@ if(quantidade > 2999)
 print("Você tem mais de 3000 dinheiros.")
 ```
 * No exemplo acima temos dois erros: faltam os dois pontos depois da condição do `if` e a linha abaixo dele não está identada.
-* Erros de sintaxe são comumente fáceis de serem corrigidos, uma vez que você entenda o qual é o problema.
+* Erros de sintaxe são geralmente fáceis de serem corrigidos, uma vez que você entenda o qual é o problema.
 * As mensagens mais comuns são `SyntaxError: invalid syntax` e `SyntaxError: invalid token`
   * As mensagens indicam onde no programa o erro ocorreu. Na verdade, ele diz a você onde o Python notou o problema, que não é necessariamente onde está o erro.
   * Algumas vezes o erro está localizado em um ponto anterior ao indicado pela mensagem de erro, frequentemente na linha anterior
@@ -22,7 +22,7 @@ print("Você tem mais de 3000 dinheiros.")
   * Verifique seas aspas ou apóstrofes de qualquer string no código estão emparelhados.
   * Uma falta de fecha parêntese, chave ou colchete – `(`, `{` ou `[` – faz o Python continuar com a próxima linha como parte da expressão corrente. Geralmente, um erro ocorre quase que imediatamente na próxima linha.
   * Verifique pelo clássico `=` em vez de `==` em uma condição.
-  
+
 **Exceções**
 * Quando uma exceção acontece, o programa pode ser interrompido ou não dependendo de como ela é _tratada_.
 * Quando acontece algum erro que não é relacionado a sintaxe da linguagem, mas sim a lógica da execução, esse erro é chamado de exceção.
@@ -49,7 +49,7 @@ finally:
 ```
 * O Python possui diversos tipos de exceções que podem ser encontrados na [documentação oficial](https://docs.python.org/pt-br/3.7/library/exceptions.html#concrete-exceptions).
 * Podemos lançar nossas próprias exceções no código para indicar erros de execução utilizando a palavra-chave `raise`. A mensagem do erro pode ser personalizada.
-* É possível criar seus próprios tipos de exceções. Vamos ver mais sobre isso nó módulo 2 quando falarmos de classes e orientação a objetos.
+* É possível criar seus próprios tipos de exceções.
 
 ## debug.py
 * O primeiro passo em depurar (_debugging_), ou seja, investigar e eliminar erros de programação, é identificar que tipo de erro você cometeu.

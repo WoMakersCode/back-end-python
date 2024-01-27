@@ -1,7 +1,7 @@
 # Construtor padrão
 class MinhaClasse:
     def __init__(self, nome):
-        self.nome = nome
+        self.nome = nome"
         print(f'MinhaClasse1: Chamou o construtor padrão de {nome}')
 
     def __del__(self):

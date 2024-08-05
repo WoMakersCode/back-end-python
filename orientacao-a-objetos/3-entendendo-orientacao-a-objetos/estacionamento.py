@@ -25,21 +25,21 @@ class Vaga:
         self.id = identificador
         self.livre = True
 
-        if tipo is not 'carro' and tipo is not 'moto':
+        if tipo != 'carro' and tipo != 'moto':
             raise ValueError(f'O tipo de vaga {tipo} não foi reconhecido')
 
         self.tipo = tipo
         self.placa = None
 
     def ocupar(self, placa):
-        if self.livre is False:
+        if self.livre == False:
             raise ValueError(f'A vaga {self.identificador} já está ocupada')
 
         self.placa = placa
         self.livre = False
 
     def desocupar(self):
-        if self.livre is True:
+        if self.livre == True:
             raise ValueError(f'A vaga {self.identificador} já está livre')
 
         self.placa = None
@@ -75,7 +75,7 @@ class Estacionamento:
         id_da_proxima_vaga, tipo = self.buscar_id_da_proxima_vaga_livre('carro') # gera o id da próxima vaga
         if id_da_proxima_vaga is None:
             raise ValueError(f'Não há mais vagas de carro disponíveis no estacionamento.')
-        elif id_da_proxima_vaga is not None and tipo is 'carro':
+        elif id_da_proxima_vaga != None and tipo == 'carro':
             vaga = self.vagas_carro[id_da_proxima_vaga]
             vaga.ocupar(carro.placa)
             carro.estacionar()
@@ -95,13 +95,13 @@ class Estacionamento:
 
         if id_da_proxima_vaga is None:
             raise ValueError(f'Não há mais vagas de moto disponíveis no estacionamento.')
-        elif id_da_proxima_vaga is not None and tipo is 'moto':
+        elif id_da_proxima_vaga != None and tipo == 'moto':
             vaga = self.vagas_moto[id_da_proxima_vaga]
             vaga.ocupar(moto.placa)
             moto.estacionar()
             self.moto_para_vaga[moto.placa] = vaga.id # permite achar imediatamente em qual vaga está a moto
             self.total_vagas_livres_moto -= 1 # reduz o número de vagas livres
-        elif id_da_proxima_vaga is not None and tipo is 'carro':
+        elif id_da_proxima_vaga != None and tipo == 'carro':
             vaga = self.vagas_carro[id_da_proxima_vaga]
             vaga.ocupar(moto.placa)
             moto.estacionar()

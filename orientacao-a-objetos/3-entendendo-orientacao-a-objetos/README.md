@@ -23,7 +23,7 @@
 * Vamos fazer a modelagem de um sistema de estacionamento.
 * Para isso, vamos levantar os requisitos.
 * Então a gente conversa com um dono de estacionamento e ele nos explica o seguinte:
-  * O estacionamento é um pátio de apenas um andar. Ele possui 50 vagas.
+  * O estacionamento é um pátio de apenas um andar. Ele possui 10 vagas.
   * Há 5 vagas para carros e 5 vagas para motos. Vagas para carro são maiores do que as vagas para motos.
   * Carros e motos são identificados por suas placas.
   * Vagas são identificadas por um número. Cada vaga tem um número identificador único.

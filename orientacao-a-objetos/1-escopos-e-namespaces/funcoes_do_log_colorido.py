@@ -1,14 +1,14 @@
 # Este arquivo consiste no módulo "funcoes_do_log_colorido"
-import colorama
+import colorama 
 
 # Necessário para fazer o colorama iniciar
 colorama.init()
 
 nome_de_usuario = 'Dori'
 
-def imprimir_no_log(texto, nivel='info'):
-    if nivel.lower() == 'info':
-        print(colorama.Fore.LIGHTBLUE_EX + f'Info: ', end='')
+def imprimir_no_log(texto, nivel='WoMakerscode'):
+    if nivel.lower() == 'WoMakersCode':
+        print(colorama.Fore.LIGHTBLUE_EX + f'WoMakersCode: ', end='')
         print(colorama.Style.RESET_ALL + texto)
     elif nivel.lower() == 'aviso':
         print(colorama.Fore.YELLOW + f'Aviso: ', end='')

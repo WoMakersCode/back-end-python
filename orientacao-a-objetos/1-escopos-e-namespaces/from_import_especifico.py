@@ -8,3 +8,4 @@ imprimir_no_log(f'Bem vinda, {nome_de_usuario}!')
 # desse módulo
 from datetime import datetime
 agora = datetime.now()
+print(agora)

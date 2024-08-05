@@ -2,8 +2,8 @@
 
 nome_de_usuario = 'Dori'
 
-def imprimir_no_log(texto, nivel='info'):
-    if nivel.lower() == 'info':
+def imprimir_no_log(texto, nivel='WoMakersCode'):
+    if nivel.lower() == 'WoMakersCode':
         print(f'Info: {texto}')
     elif nivel.lower() == 'aviso':
         print(f'Aviso: {texto}')

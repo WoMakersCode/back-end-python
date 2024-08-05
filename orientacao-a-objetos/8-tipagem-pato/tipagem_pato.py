@@ -32,4 +32,4 @@ pato = Pato()
 calopsita = Calopsita()
 
 executar_pato(pato)
-executar_pato(calopsita)
+#executar_pato(calopsita)
